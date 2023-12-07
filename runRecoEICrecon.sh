@@ -1,5 +1,6 @@
 #!/bin/bash
 
+EICSHELL=./eic-shell
 
 CONDOR_DIR=condorReco
 OUT_DIR=output
