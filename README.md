@@ -19,3 +19,24 @@ condor_submit submitSim.job | tee sim.log
 ```Sh
 condor_submit submitReco.job | tee reco.log
 ```
+
+## Selecting a specific container image version
+
+Replace the line in condor job description file: 
+
+```Sh
++SingularityImage="/cvmfs/singularity.opensciencegrid.org/eicweb/jug_xl:nightly"
+```
+
+with the following to select version eg. `23.11-stable`:
+
+```Sh
++SingularityImage="/cvmfs/singularity.opensciencegrid.org/eicweb/jug_xl:23.11-stable"
+```
+
+To list available image versions:
+
+```Sh
+ls /cvmfs/singularity.opensciencegrid.org/eicweb/
+```
+

@@ -6,6 +6,7 @@ GetEnv          		= False
 
 # Use singularity image
 +SingularityImage="/cvmfs/singularity.opensciencegrid.org/eicweb/jug_xl:nightly"
+#+SingularityImage="/cvmfs/singularity.opensciencegrid.org/eicweb/jug_xl:23.11-stable"
 
 # The requirement line specifies which machines we want to run this job on.  Any arbitrary classad expression can be used.
 Requirements    = (CPU_Speed >= 1)
