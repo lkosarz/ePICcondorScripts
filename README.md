@@ -40,3 +40,7 @@ To list available image versions:
 ls /cvmfs/singularity.opensciencegrid.org/eicweb/
 ```
 
+## More info
+
+[https://htcondor.readthedocs.io/en/lts/admin-manual/singularity-support.html](https://htcondor.readthedocs.io/en/lts/admin-manual/singularity-support.html)
+
