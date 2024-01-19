@@ -19,6 +19,7 @@ source /opt/detector/setup.sh
 
 #source ${LOCAL_PREFIX}/epic/install/setup.sh
 #source ${LOCAL_PREFIX}/EICrecon/bin/eicrecon-this.sh
+#source ${LOCAL_PREFIX}/EICrecon/install/bin/eicrecon-this.sh
 
 NUMBER_OF_EVENTS=1000
 DDSIM_FILE=${1}
