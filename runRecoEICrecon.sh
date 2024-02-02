@@ -14,6 +14,12 @@ mkdir "${CONDOR_DIR}/${OUT_DIR}"
 
 export LOCAL_PREFIX='pwd'
 
+#cd epic
+#rm -rf build
+#cmake -B build -S . -DCMAKE_INSTALL_PREFIX=install
+#cmake --build build -j8 -- install
+#cd ../
+
 ## Set environment
 source /opt/detector/setup.sh
 

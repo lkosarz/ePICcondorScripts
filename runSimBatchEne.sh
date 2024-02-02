@@ -16,8 +16,15 @@ mkdir "${CONDOR_DIR}/${OUT_DIR}"
 # set energy values to simulate
 ENERGY_TAB=(0.1 0.5 1.0 5.0 10.0)
 
+#cd epic
+#rm -rf build
+#cmake -B build -S . -DCMAKE_INSTALL_PREFIX=install
+#cmake --build build -j8 -- install
+#cd ../
+
 ## Set environment
 source /opt/detector/setup.sh
+#source epic/install/setup.sh
 
 #export LOCAL_PREFIX=/gpfs02/eic/lkosarzew/Calorimetry/nHcalDev
 #source ${LOCAL_PREFIX}/epic/install/setup.sh
@@ -38,9 +45,12 @@ do
 SEED=$(date +%N)
 #echo $SEED
 
-npsim --compactFile ${DETECTOR_PATH}/${DETECTOR_CONFIG}.xml --numberOfEvents ${N_EVENTS} --random.seed ${SEED} --enableGun \
-	--gun.particle pi+ --gun.thetaMin 130*degree --gun.thetaMax 177*degree --gun.distribution uniform \
-	--gun.energy ${ene}*GeV --outputFile ${CONDOR_DIR}/${OUT_DIR}/output_E${ene}GeV_${1}
+OPTIONS="--compactFile ${DETECTOR_PATH}/${DETECTOR_CONFIG}.xml --numberOfEvents ${N_EVENTS} --random.seed ${SEED} --enableGun \
+	--gun.particle proton --gun.thetaMin 170*degree --gun.thetaMax 180*degree --gun.distribution uniform \
+	--gun.energy ${ene}*GeV --outputFile ${CONDOR_DIR}/${OUT_DIR}/output_E${ene}GeV_${1}"
+
+echo $OPTIONS
+npsim $OPTIONS
 
 done
 	
