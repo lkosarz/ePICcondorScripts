@@ -21,8 +21,10 @@ export LOCAL_PREFIX='pwd'
 #cd ../
 
 ## Set environment
-source /opt/detector/setup.sh
+source /opt/detector/epic-main/bin/thisepic.sh
+#source /opt/detector/setup.sh
 
+#source ${LOCAL_PREFIX}/install/bin/thisepic.sh
 #source ${LOCAL_PREFIX}/epic/install/setup.sh
 #source ${LOCAL_PREFIX}/EICrecon/bin/eicrecon-this.sh
 #source ${LOCAL_PREFIX}/EICrecon/install/bin/eicrecon-this.sh

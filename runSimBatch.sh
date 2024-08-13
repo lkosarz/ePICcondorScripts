@@ -20,10 +20,12 @@ mkdir "${CONDOR_DIR}/${OUT_DIR}"
 #cd ../
 
 ## Set environment
-source /opt/detector/setup.sh
+source /opt/detector/epic-main/bin/thisepic.sh
+#source /opt/detector/setup.sh
 #source epic/install/setup.sh
 
 #export LOCAL_PREFIX=/gpfs02/eic/lkosarzew/Calorimetry/nHcalDev
+#source ${LOCAL_PREFIX}/install/bin/thisepic.sh
 #source ${LOCAL_PREFIX}/epic/install/setup.sh
 #export DETECTOR_PATH=/gpfs02/eic/lkosarzew/Calorimetry/nHcalDev/epic/install/share/epic
 
